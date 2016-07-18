@@ -1,0 +1,1 @@
+# vlc-android-sdk_armeabi-v7a
