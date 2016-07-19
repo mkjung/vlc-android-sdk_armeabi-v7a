@@ -1,0 +1,6 @@
+{
+  "name": "Vlc-android-sdk armeabi-v7a",
+  "tagline": "",
+  "body": "# vlc-android-sdk_armeabi-v7a\r\n===============\r\n\r\nVLC Android SDK armeabi-v7a for slimness\r\n\r\n( from https://github.com/mrmaffen/vlc-android-sdk )\r\n\r\nBuilding the LibVLC Android SDK armeabi-v7a yourself\r\n----------------------------------------\r\n\r\nTo build a fresh version of the LibVLC Android SDK armeabi-v7a,\r\nplease make sure that you have setup your machine correctly.\r\n(You can ignore the steps after and including 'Building'):\r\nhttps://wiki.videolan.org/AndroidCompile\r\n\r\nAfterwards run this commands\r\n\r\n```\r\nmkdir -p ~/workspace && cd ~/workspace\r\ngit clone https://github.com/mkjung/vlc-android-sdk_armeabi-v7a.git\r\ncd vlc-android-sdk_armeabi-v7a\r\n./gradlew buildLibVlc\r\nvim vlc-android/compile-libvlc.sh\r\n'''\r\n/NDKv # find 'NDKv'\r\nchange 11*) -> 11*|12*)\r\n'''\r\nwget -P vlc-android/vlc/contrib/tarballs https://ftp.gnu.org/gnu/nettle/nettle-3.2.tar.gz\r\n./gradlew buildLibVlc\r\n./gradlew assemble\r\n```\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
