@@ -57,6 +57,7 @@ task writePom << {
                 license {
                     name project.POM_LICENCE_NAME
                     url project.POM_LICENCE_URL
+                    distribution project.POM_LICENCE_DIST
                 }
             }
             developers {
