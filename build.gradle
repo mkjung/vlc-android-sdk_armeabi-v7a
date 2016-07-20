@@ -45,34 +45,36 @@ allprojects {
     }
 }
 
-task writePom << {
-    pom {
-        project {
-            packaging project.POM_PACKAGING
-            name project.POM_NAME
-            description project.POM_DESCRIPTION
-            url project.POM_URL
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging project.POM_PACKAGING
+                name project.POM_NAME
+                description project.POM_DESCRIPTION
+                url project.POM_URL
 
-            licenses {
-                license {
-                    name project.POM_LICENCE_NAME
-                    url project.POM_LICENCE_URL
-                    distribution project.POM_LICENCE_DIST
+                licenses {
+                    license {
+                        name project.POM_LICENCE_NAME
+                        url project.POM_LICENCE_URL
+                        distribution project.POM_LICENCE_DIST
+                    }
                 }
-            }
-            developers {
-                developer {
-                    id project.POM_DEVELOPER_ID
-                    name project.POM_DEVELOPER_NAME
+                developers {
+                    developer {
+                        id project.POM_DEVELOPER_ID
+                        name project.POM_DEVELOPER_NAME
+                    }
                 }
-            }
-            scm {
-                connection project.POM_SCM_CONNECTION
-                developerConnection project.POM_SCM_DEV_CONNECTION
-                url project.POM_SCM_URL
+                scm {
+                    connection project.POM_SCM_CONNECTION
+                    developerConnection project.POM_SCM_DEV_CONNECTION
+                    url project.POM_SCM_URL
+                }
             }
         }
-    }.writeTo("$buildDir/pom.xml")
+    }
 }
 
 task sourcesJar(type: Jar) {
