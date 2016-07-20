@@ -5,6 +5,14 @@ VLC Android SDK armeabi-v7a for slimness
 
 ( from https://github.com/mrmaffen/vlc-android-sdk )
 
+Get it via Maven Central
+------------------------
+Just add this dependency to your project and you're good to go.
+
+<pre>dependencies {
+    compile 'io.github.mkjung:vlc-android-sdk_armeabi-v7a:0.0.1'
+}</pre>
+
 Building the LibVLC Android SDK armeabi-v7a yourself
 ----------------------------------------
 
